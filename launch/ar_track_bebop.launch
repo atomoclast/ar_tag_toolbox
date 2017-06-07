@@ -4,7 +4,7 @@
 	<arg name="max_track_error" default="0.2" />
 	<arg name="cam_image_topic" default="/bebop/image_raw" />
 	<arg name="cam_info_topic" default="/bebop/camera_info" />
-	<arg name="output_frame" default="optical_frame" />
+	<arg name="output_frame" default="camera_optical" />
 
 	<node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkersNoKinect" respawn="false" output="screen">
 		<param name="marker_size"           type="double" value="$(arg marker_size)" />
