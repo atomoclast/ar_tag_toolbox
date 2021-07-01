@@ -2,9 +2,9 @@
 
   <arg name="cam_id" default="0" />
 
-  <param name="robot_description" command="$(find xacro)/xacro.py $(find ar_tag_toolbox)/urdf/usb_cam.urdf"/>
+  <param name="robot_description" command="$(find xacro)/xacro $(find ar_tag_toolbox)/urdf/usb_cam.urdf"/>
 
-  <node pkg="robot_state_publisher" type="state_publisher" name="state_publisher"/>
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
 
   <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
     <param name="video_device" value="/dev/video$(arg cam_id)" />
